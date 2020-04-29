@@ -19,3 +19,6 @@ B
 src/__init__.py,b/1/b141e8a708cfc0de96ab25c59ca83087cbddf7fa
 I
 src/models/train_model.py,c/c/cc92c821df2c88b6b7036af212b879c9d1505f02
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302

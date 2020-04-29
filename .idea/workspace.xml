@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73df268a-0c98-4d21-9ad1-acee7fe94fb3" name="Default Changelist" comment="" />
+    <list default="true" id="73df268a-0c98-4d21-9ad1-acee7fe94fb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/make_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/make_dataset.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aZFIqZr9cQ0ZrOzpnBf50ORF4e" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,8 +30,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/raw" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -32,17 +41,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/raw" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/raw" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.StockML">
+  <component name="RunManager" selected="Python.make_dataset">
     <configuration name="StockML" type="PythonConfigurationType" factoryName="Python">
       <module name="StockML" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,8 +119,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="make_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="StockML" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/data/make_dataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.make_dataset" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -129,6 +162,11 @@
       <workItem from="1586941374509" duration="4504000" />
       <workItem from="1586960496403" duration="185000" />
       <workItem from="1587055684325" duration="51000" />
+      <workItem from="1587140150619" duration="771000" />
+      <workItem from="1587218377181" duration="10075000" />
+      <workItem from="1587302094877" duration="4082000" />
+      <workItem from="1587471767503" duration="16000" />
+      <workItem from="1588155800130" duration="874000" />
     </task>
     <servers />
   </component>
@@ -136,22 +174,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="886" height="312" key="GridCell.Tab.0.bottom" timestamp="1586940513942">
+    <state x="1186" y="301" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587303187246">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="886" height="312" key="GridCell.Tab.0.bottom/52.27.1868.1053@52.27.1868.1053" timestamp="1586940513942" />
-    <state width="886" height="312" key="GridCell.Tab.0.center" timestamp="1586940513941">
+    <state x="1186" y="301" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1587303187246" />
+    <state x="1069" y="360" width="536" height="356" key="#com.intellij.tools.ToolEditorDialog" timestamp="1587304143130">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="886" height="312" key="GridCell.Tab.0.center/52.27.1868.1053@52.27.1868.1053" timestamp="1586940513941" />
-    <state width="886" height="312" key="GridCell.Tab.0.left" timestamp="1586940513939">
+    <state x="1069" y="360" width="536" height="356" key="#com.intellij.tools.ToolEditorDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1587304143130" />
+    <state width="1820" height="250" key="GridCell.Tab.0.bottom" timestamp="1587315909273">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="886" height="312" key="GridCell.Tab.0.left/52.27.1868.1053@52.27.1868.1053" timestamp="1586940513939" />
-    <state width="886" height="312" key="GridCell.Tab.0.right" timestamp="1586940513941">
+    <state width="1820" height="250" key="GridCell.Tab.0.bottom/52.27.1868.1053@52.27.1868.1053" timestamp="1587315909273" />
+    <state width="1820" height="250" key="GridCell.Tab.0.center" timestamp="1587315909272">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state width="886" height="312" key="GridCell.Tab.0.right/52.27.1868.1053@52.27.1868.1053" timestamp="1586940513941" />
+    <state width="1820" height="250" key="GridCell.Tab.0.center/52.27.1868.1053@52.27.1868.1053" timestamp="1587315909272" />
+    <state width="1820" height="250" key="GridCell.Tab.0.left" timestamp="1587315909272">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1820" height="250" key="GridCell.Tab.0.left/52.27.1868.1053@52.27.1868.1053" timestamp="1587315909272" />
+    <state width="1820" height="250" key="GridCell.Tab.0.right" timestamp="1587315909273">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state width="1820" height="250" key="GridCell.Tab.0.right/52.27.1868.1053@52.27.1868.1053" timestamp="1587315909273" />
     <state width="886" height="312" key="GridCell.Tab.1.bottom" timestamp="1586940513951">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
@@ -168,10 +214,10 @@
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
     <state width="886" height="312" key="GridCell.Tab.1.right/52.27.1868.1053@52.27.1868.1053" timestamp="1586940513951" />
-    <state x="475" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1586938795515">
+    <state x="831" y="166" width="1022" height="737" key="SettingsEditor" timestamp="1587304155634">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
-    <state x="475" y="188" width="1022" height="737" key="SettingsEditor/52.27.1868.1053@52.27.1868.1053" timestamp="1586938795515" />
+    <state x="831" y="166" width="1022" height="737" key="SettingsEditor/52.27.1868.1053@52.27.1868.1053" timestamp="1587304155634" />
     <state x="1089" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1586935139256">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
