@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from pandas_profiling import ProfileReport
 
 plt.rcParams['figure.figsize'] = (12, 8)
 
@@ -9,6 +10,16 @@ data = data[:-2]  # remove rows displaying statistics
 print(data.tail())
 print(data.shape)
 print(data.describe())
+
+
+#%% generate report
+def generate_report(data, title):
+	report = ProfileReport(data, title=title, html={'style': {'full_width': True}})
+	return report
+
+
+profile = generate_report(data, 'Raw Safaricom Data Report')
+profile.to_file(output_file='../../reports/Raw-Safaricom-Report.html')
 
 #%% show number of missing data per column
 null_counts = data.isnull().sum()
@@ -65,6 +76,10 @@ def convert_date(val):
 
 
 data['Date'] = pd.to_datetime(data['Date'].apply(convert_date), format='%Y-%m-%d')
+
+#%% generate report
+profile = generate_report(data, 'Processed Safaricom Data Report')
+profile.to_file(output_file='../../reports/Processed-Safaricom-Report.html')
 
 #%% save cleaned data
 print(data.head())
