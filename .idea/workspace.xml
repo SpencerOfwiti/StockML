@@ -4,7 +4,6 @@
     <list default="true" id="73df268a-0c98-4d21-9ad1-acee7fe94fb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/make_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/make_dataset.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/raw" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Lubia/Projects/Hello Python/testing" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,12 +43,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/raw" />
-      <recent name="$PROJECT_DIR$/data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/raw" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data/raw" />
+      <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
   <component name="RunManager" selected="Python.make_dataset">
@@ -166,7 +166,11 @@
       <workItem from="1587218377181" duration="10075000" />
       <workItem from="1587302094877" duration="4082000" />
       <workItem from="1587471767503" duration="16000" />
-      <workItem from="1588155800130" duration="874000" />
+      <workItem from="1588155800130" duration="4079000" />
+      <workItem from="1588245299509" duration="106000" />
+      <workItem from="1588245469791" duration="73000" />
+      <workItem from="1588515656761" duration="202000" />
+      <workItem from="1588516901520" duration="49000" />
     </task>
     <servers />
   </component>
@@ -174,6 +178,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="622" y="348" width="707" height="425" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588168410777">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="622" y="348" width="707" height="425" key="#com.intellij.fileTypes.FileTypeChooser/52.27.1868.1053@52.27.1868.1053" timestamp="1588168410777" />
     <state x="1186" y="301" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587303187246">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
@@ -182,6 +190,10 @@
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
     <state x="1069" y="360" width="536" height="356" key="#com.intellij.tools.ToolEditorDialog/52.27.1868.1053@52.27.1868.1053" timestamp="1587304143130" />
+    <state x="755" y="311" key="FileChooserDialogImpl" timestamp="1588245540227">
+      <screen x="52" y="27" width="1868" height="1053" />
+    </state>
+    <state x="755" y="311" key="FileChooserDialogImpl/52.27.1868.1053@52.27.1868.1053" timestamp="1588245540227" />
     <state width="1820" height="250" key="GridCell.Tab.0.bottom" timestamp="1587315909273">
       <screen x="52" y="27" width="1868" height="1053" />
     </state>
