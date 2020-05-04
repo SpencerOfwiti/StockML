@@ -4,6 +4,8 @@
     <list default="true" id="73df268a-0c98-4d21-9ad1-acee7fe94fb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_processed_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/test_processed_dataset.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +46,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/data/processed/tests" />
+      <recent name="$PROJECT_DIR$/data/processed" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/data/raw" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -171,6 +177,9 @@
       <workItem from="1588245469791" duration="73000" />
       <workItem from="1588515656761" duration="202000" />
       <workItem from="1588516901520" duration="49000" />
+      <workItem from="1588521274535" duration="1614000" />
+      <workItem from="1588523047629" duration="1856000" />
+      <workItem from="1588594362478" duration="1962000" />
     </task>
     <servers />
   </component>
