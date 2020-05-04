@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Windows systems
-if [["$OSTYPE" == "mysys"]]; then
+if [[ "$OSTYPE" == "msys" ]]; then
   # install virtualenv
   pip install --user virtualenv
 
