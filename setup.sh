@@ -1,13 +1,28 @@
 #!/bin/bash
 
-# install virtualenv
-pip3 install virtualenv
+# Windows systems
+if [["$OSTYPE" == "mysys"]]; then
+  # install virtualenv
+  pip install --user virtualenv
 
-# create virtual environment
-python3 -m venv venv
+  # create virtual environment
+  py -m venv venv
 
-# activate virtual environment
-source venv/bin/activate
+  # activate virtual environment
+  .\venv\Scripts\activate
+
+# Unix systems
+else
+  # install virtualenv
+  pip install --user virtualenv
+
+  # create virtual environment
+  python3 -m venv venv
+
+  # activate virtual environment
+  source venv/bin/activate
+
+fi
 
 # install requirements
-pip3 install -r requirements.txt
+pip install -r requirements.txt
