@@ -1,21 +1,22 @@
 import pandas as pd
 import pytest
+from ..dataset_completeness import check_null_values
 
 
 @pytest.fixture
-def processed_data():
+def data():
 	"""
 	fixture holding processed dataset
 	:return:
 	"""
-	data = pd.read_csv('data/processed/Safaricom-Ltd(SCOM).csv')
+	data = pd.read_csv('src/tests/fixtures/test.csv')
 	return data
 
 
-def test_is_null_is_zero(processed_data):
+def test_is_null_is_zero(data):
 	"""
 	test if processed data has no null variables
-	:param processed_data:
+	:param data:
 	:return:
 	"""
-	assert processed_data.isnull().sum().sum() == 0
+	assert check_null_values(data) == 0
