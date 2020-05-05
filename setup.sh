@@ -9,7 +9,9 @@ if [[ "$OSTYPE" == "msys" ]]; then
   py -m venv venv
 
   # activate virtual environment
-  .\venv\Scripts\activate
+  source venv/Scripts/activate
+  
+  pip install wheel
 
 # Unix systems
 else
