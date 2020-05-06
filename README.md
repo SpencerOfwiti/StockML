@@ -28,7 +28,7 @@ This provides a platform to lower the barriers to entry for everyone keen on inv
 
 ## Build Status
 
-[![travis build](https://img.shields.io/travis/com/github/SpencerOfwiti/stock-ml)](https://travis-ci.com/github/SpencerOfwiti/stock-ml)
+[![Build Status](https://travis-ci.com/SpencerOfwiti/stock-ml.svg?token=u1WWyypPUJofJpbFsCQp&branch=master)](https://travis-ci.com/SpencerOfwiti/stock-ml)
 
 ## Built With
 * [Python 3.6](https://www.python.org/) - The programming language used.
