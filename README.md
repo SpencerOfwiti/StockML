@@ -105,7 +105,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* **Spencer Ofwiti** - *Initial work* 
+* **[Spencer Ofwiti](https://github.com/SpencerOfwiti)** - *Initial work* 
     
 [![github follow](https://img.shields.io/github/followers/SpencerOfwiti?label=Follow_on_GitHub)](https://github.com/SpencerOfwiti)
 [![twitter follow](https://img.shields.io/twitter/follow/SpencerOfwiti?label=Follow)](https://twitter.com/SpencerOfwiti)
@@ -113,6 +113,9 @@ Add additional notes about how to deploy this on a live system
 See also the list of [contributors](https://github.com/SpencerOfwiti/stock-ml/contributors) who participated in this project.
 
 [![contributors](https://img.shields.io/github/contributors/SpencerOfwiti/stock-ml)](https://github.com/SpencerOfwiti/stock-ml/contributors)
+
+* **[Kelvin Minjire](https://github.com/Minjire)** - *Contributor*
+* **[Kevin Wachira](https://github.com/wachira-kevin)** - *Contributor*
 
 ## License
 
