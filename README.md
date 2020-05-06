@@ -26,7 +26,7 @@ Over the years the number of individuals investing in the Kenyan Securities Mark
 More and more of the trading is being done by investment companies and wealthy investors.
 This provides a platform to lower the barriers to entry for everyone keen on investing in the securities market. 
 
-# Build Status
+## Build Status
 
 [![travis build](https://img.shields.io/travis/com/github/SpencerOfwiti/stock-ml)](https://travis-ci.com/github/SpencerOfwiti/stock-ml)
 
