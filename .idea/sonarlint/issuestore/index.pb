@@ -22,8 +22,6 @@ I
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-7
-LICENSE,0/3/0398ccd0f49298b10a3d76a47800d2ebecd49859
 8
 setup.sh,5/9/592a1aae25926e838f4bca2e1c8981f30b077dda
 ;
@@ -32,3 +30,8 @@ S
 #src/tests/test_processed_dataset.py,2/7/27a462b3d314d6a1aed8a62e1ad6a8de57918dcf
 K
 src/dataset_completeness.py,e/4/e49409ed60e96f25167595ff569d44232b486de2
+:
+
+LICENSE.md,4/a/4a8486805915245bbbe2e3c8c1a9d680c6843a82
+W
+'reports/Processed-Safaricom-Report.html,b/b/bbfebd61cbd836650c59687ddfbb73e2a8222c66
