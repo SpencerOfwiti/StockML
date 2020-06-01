@@ -1,6 +1,9 @@
+import sys
 import pandas as pd
 import matplotlib.pyplot as plt
-from pandas_profiling import ProfileReport
+
+sys.path.append('..')
+from report import generate_report
 
 plt.rcParams['figure.figsize'] = (12, 8)
 
@@ -13,11 +16,6 @@ print(data.describe())
 
 
 #%% generate report
-def generate_report(data, title):
-	report = ProfileReport(data, title=title, html={'style': {'full_width': True}})
-	return report
-
-
 profile = generate_report(data, 'Raw Safaricom Data Report')
 profile.to_file(output_file='../../reports/Raw-Safaricom-Report.html')
 
@@ -78,11 +76,11 @@ def convert_date(val):
 data['Date'] = pd.to_datetime(data['Date'].apply(convert_date), format='%Y-%m-%d')
 
 #%% generate report
-profile = generate_report(data, 'Processed Safaricom Data Report')
-profile.to_file(output_file='../../reports/Processed-Safaricom-Report.html')
+profile = generate_report(data, 'Interim Safaricom Data Report')
+profile.to_file(output_file='../../reports/Interim-Safaricom-Report.html')
 
 #%% save cleaned data
 print(data.head())
 print(data.info())
 print(data.shape)
-data.to_csv('../../data/processed/Safaricom-Ltd(SCOM).csv', index=False)
+data.to_csv('../../data/interim/Safaricom-Ltd(SCOM).csv', index=False)
