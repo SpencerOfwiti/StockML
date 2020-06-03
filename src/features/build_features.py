@@ -1,5 +1,4 @@
 import sys
-import math
 import pandas as pd
 from fastai.tabular.transform import add_datepart
 
@@ -14,7 +13,7 @@ data.index = data['Date']
 # %% sort data in ascending order
 data = data.sort_index(ascending=True, axis=0)
 
-# %% create dataframe with date and the target variable
+# %% create dataset with date and the target variable
 new_data = pd.DataFrame(index=range(0, len(data)), columns=['Date', 'Price'])
 
 for i in range(0, len(data)):

@@ -14,7 +14,6 @@ print(data.tail())
 print(data.shape)
 print(data.describe())
 
-
 #%% generate report
 profile = generate_report(data, 'Raw Safaricom Data Report')
 profile.to_file(output_file='../../reports/Raw-Safaricom-Report.html')
