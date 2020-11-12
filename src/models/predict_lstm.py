@@ -1,18 +1,16 @@
-import sys
 from joblib import load
 import pandas as pd
 import numpy as np
 
-sys.path.append('..')
-from scaling import scaler
-from rmse import rms
-from threshold import get_threshold
+from src.scaling import scaler
+from src.rmse import rms
+from src.threshold import get_threshold
 
 # %% load dataset
-data = pd.read_csv('../../data/processed/Safaricom-Ltd(SCOM)-lstm.csv')
+data = pd.read_csv('data/processed/Safaricom-Ltd(SCOM)-lstm.csv')
 
 # %% load the LSTM model
-model = load('../../models/lstm/Safaricom-Ltd(SCOM).pkl')
+model = load('models/lstm/Safaricom-Ltd(SCOM).pkl')
 
 # %% split data into test data
 data_list = data.values
@@ -48,4 +46,4 @@ for i in range(0, len(test)):
     pred['Prediction'][i] = predicted_price[i][0]
 
 # %% save predicted data
-pred.to_csv('../../data/predicted/lstm/Safaricom-Ltd(SCOM).csv', index=False)
+pred.to_csv('data/predicted/lstm/Safaricom-Ltd(SCOM).csv', index=False)

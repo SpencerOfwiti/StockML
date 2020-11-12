@@ -1,14 +1,12 @@
-import sys
 import pandas as pd
 
-sys.path.append('..')
-from rmse import rms
-from threshold import get_overflow
+from src.rmse import rms
+from src.threshold import get_overflow
 
 # %% load dataset
-train = pd.read_csv('../../data/processed/Safaricom-Ltd(SCOM)-train.csv')
-test = pd.read_csv('../../data/processed/Safaricom-Ltd(SCOM)-test.csv')
-data = pd.read_csv('../../data/processed/Safaricom-Ltd(SCOM).csv')
+train = pd.read_csv('data/processed/Safaricom-Ltd(SCOM)-train.csv')
+test = pd.read_csv('data/processed/Safaricom-Ltd(SCOM)-test.csv')
+data = pd.read_csv('data/processed/Safaricom-Ltd(SCOM).csv')
 
 # %% create predictions for test data
 pred = []
@@ -27,4 +25,4 @@ test['Prediction'] = pred
 test = test[['Price', 'Prediction']]
 
 # %% save predicted data
-test.to_csv('../../data/predicted/moving_average/Safaricom-Ltd(SCOM).csv', index=False)
+test.to_csv('data/predicted/moving_average/Safaricom-Ltd(SCOM).csv', index=False)

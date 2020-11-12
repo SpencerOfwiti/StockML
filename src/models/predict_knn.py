@@ -1,13 +1,11 @@
-import sys
 from joblib import load
 import pandas as pd
 
-sys.path.append('..')
-from scaling import scaler
-from rmse import rms
+from src.scaling import scaler
+from src.rmse import rms
 
 # %% load test dataset
-test = pd.read_csv('../../data/processed/Safaricom-Ltd(SCOM)-test.csv')
+test = pd.read_csv('data/processed/Safaricom-Ltd(SCOM)-test.csv')
 
 x_test = test.drop('Price', axis=1)
 y_test = test['Price']
@@ -17,7 +15,7 @@ x_test_scaled = scaler.fit_transform(x_test)
 x_test = pd.DataFrame(x_test_scaled)
 
 # %% load the KNN model
-model = load('../../models/knn/Safaricom-Ltd(SCOM).pkl')
+model = load('models/knn/Safaricom-Ltd(SCOM).pkl')
 
 # %% create predictions for test data
 pred = model.predict(x_test)
@@ -31,4 +29,4 @@ test['Prediction'] = pred
 test = test[['Price', 'Prediction']]
 
 # %% save predicted data
-test.to_csv('../../data/predicted/knn/Safaricom-Ltd(SCOM).csv', index=False)
+test.to_csv('data/predicted/knn/Safaricom-Ltd(SCOM).csv', index=False)
