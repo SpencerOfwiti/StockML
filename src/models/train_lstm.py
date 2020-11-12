@@ -1,16 +1,14 @@
-import sys
 from joblib import dump
 import pandas as pd
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
 
-sys.path.append('..')
-from threshold import get_threshold
-from scaling import scaler
+from src.threshold import get_threshold
+from src.scaling import scaler
 
 # %% load dataset
-data = pd.read_csv('../../data/interim/Safaricom-Ltd(SCOM).csv')
+data = pd.read_csv('data/interim/Safaricom-Ltd(SCOM).csv')
 data = data[['Date', 'Price']]
 data.index = data['Date']
 data.drop('Date', axis=1, inplace=True)
@@ -19,7 +17,7 @@ data.drop('Date', axis=1, inplace=True)
 data = data.sort_index(ascending=True, axis=0)
 
 # %% save dataset for later use
-data.to_csv('../../data/processed/Safaricom-Ltd(SCOM)-lstm.csv', index=False)
+data.to_csv('data/processed/Safaricom-Ltd(SCOM)-lstm.csv', index=False)
 
 # %% split data into train data
 data_list = data.values
@@ -49,4 +47,4 @@ model.compile(loss='mean_squared_error', optimizer='adam')
 model.fit(x_train, y_train, epochs=10, batch_size=1, verbose=2)
 
 # %% save model for later use
-dump(model, '../../models/lstm/Safaricom-Ltd(SCOM).pkl')
+dump(model, 'models/lstm/Safaricom-Ltd(SCOM).pkl')

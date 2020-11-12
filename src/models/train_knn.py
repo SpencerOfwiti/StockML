@@ -1,14 +1,12 @@
-import sys
 from joblib import dump
 import pandas as pd
 from sklearn import neighbors
 from sklearn.model_selection import GridSearchCV
 
-sys.path.append('..')
-from scaling import scaler
+from src.scaling import scaler
 
 # %% load train dataset
-train = pd.read_csv('../../data/processed/Safaricom-Ltd(SCOM)-train.csv')
+train = pd.read_csv('data/processed/Safaricom-Ltd(SCOM)-train.csv')
 
 x_train = train.drop('Price', axis=1)
 y_train = train['Price']
@@ -24,4 +22,4 @@ model = GridSearchCV(knn, params, cv=5)
 model.fit(x_train, y_train)
 
 # %% save the model for later use
-dump(model, '../../models/knn/Safaricom-Ltd(SCOM).pkl')
+dump(model, 'models/knn/Safaricom-Ltd(SCOM).pkl')

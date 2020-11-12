@@ -1,13 +1,11 @@
-import sys
 import pandas as pd
 from fbprophet import Prophet
 
-sys.path.append('..')
-from threshold import get_threshold
-from rmse import rms
+from src.threshold import get_threshold
+from src.rmse import rms
 
 # %% load dataset
-new_data = pd.read_csv('../../data/interim/Safaricom-Ltd(SCOM).csv')
+new_data = pd.read_csv('data/interim/Safaricom-Ltd(SCOM).csv')
 new_data = new_data[['Date', 'Price']]
 new_data.index = new_data['Date']
 
@@ -25,8 +23,8 @@ model = Prophet()
 model.fit(train)
 
 # %% save train and test data
-train.to_csv('../../data/processed/Safaricom-Ltd(SCOM)-prophet-train.csv', index=False)
-test.to_csv('../../data/processed/Safaricom-Ltd(SCOM)-prophet-test.csv', index=False)
+train.to_csv('data/processed/Safaricom-Ltd(SCOM)-prophet-train.csv', index=False)
+test.to_csv('data/processed/Safaricom-Ltd(SCOM)-prophet-test.csv', index=False)
 
 # %% create predictions for the test data
 close_prices = model.make_future_dataframe(periods=len(test))
@@ -42,4 +40,4 @@ test['Prediction'] = forecast_test.values
 test = test[['y', 'Prediction']]
 
 # %% save predicted data
-test.to_csv('../../data/predicted/prophet/Safaricom-Ltd(SCOM).csv', index=False)
+test.to_csv('data/predicted/prophet/Safaricom-Ltd(SCOM).csv', index=False)
