@@ -1,14 +1,12 @@
-import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 
-sys.path.append('..')
-from report import generate_report
+from src.report import generate_report
 
 plt.rcParams['figure.figsize'] = (12, 8)
 
 #%% create a dataframe
-data = pd.read_csv('../../data/raw/Safaricom-Ltd(SCOM).csv')
+data = pd.read_csv('data/raw/Safaricom-Ltd(SCOM).csv')
 data = data[:-2]  # remove rows displaying statistics
 print(data.tail())
 print(data.shape)
@@ -16,7 +14,7 @@ print(data.describe())
 
 #%% generate report
 profile = generate_report(data, 'Raw Safaricom Data Report')
-profile.to_file(output_file='../../reports/Raw-Safaricom-Report.html')
+profile.to_file(output_file='reports/Raw-Safaricom-Report.html')
 
 #%% show number of missing data per column
 null_counts = data.isnull().sum()
@@ -76,10 +74,10 @@ data['Date'] = pd.to_datetime(data['Date'].apply(convert_date), format='%Y-%m-%d
 
 #%% generate report
 profile = generate_report(data, 'Interim Safaricom Data Report')
-profile.to_file(output_file='../../reports/Interim-Safaricom-Report.html')
+profile.to_file(output_file='reports/Interim-Safaricom-Report.html')
 
 #%% save cleaned data
 print(data.head())
 print(data.info())
 print(data.shape)
-data.to_csv('../../data/interim/Safaricom-Ltd(SCOM).csv', index=False)
+data.to_csv('data/interim/Safaricom-Ltd(SCOM).csv', index=False)
