@@ -2,12 +2,11 @@ import sys
 import pandas as pd
 from fastai.tabular.transform import add_datepart
 
-sys.path.append('..')
-from report import generate_report
-from threshold import get_threshold
+from src.report import generate_report
+from src.threshold import get_threshold
 
 # %% load dataset
-data = pd.read_csv('../../data/interim/Safaricom-Ltd(SCOM).csv')
+data = pd.read_csv('data/interim/Safaricom-Ltd(SCOM).csv')
 data.index = data['Date']
 
 # %% sort data in ascending order
@@ -34,13 +33,13 @@ for i in range(0, len(new_data)):
 
 #%% generate report
 profile = generate_report(new_data, 'Processed Safaricom Data Report')
-profile.to_file(output_file='../../reports/Processed-Safaricom-Report.html')
+profile.to_file(output_file='reports/Processed-Safaricom-Report.html')
 
 # %% save processed data
 print(new_data.head())
 print(new_data.info())
 print(new_data.shape)
-new_data.to_csv('../../data/processed/Safaricom-Ltd(SCOM).csv', index=False)
+new_data.to_csv('data/processed/Safaricom-Ltd(SCOM).csv', index=False)
 
 # %% splitting data into train and test data at 80% train
 threshold = get_threshold(new_data)
@@ -50,5 +49,5 @@ test = new_data[threshold:]
 # %% save train and test data
 print(train.shape)
 print(test.shape)
-train.to_csv('../../data/processed/Safaricom-Ltd(SCOM)-train.csv', index=False)
-test.to_csv('../../data/processed/Safaricom-Ltd(SCOM)-test.csv', index=False)
+train.to_csv('data/processed/Safaricom-Ltd(SCOM)-train.csv', index=False)
+test.to_csv('data/processed/Safaricom-Ltd(SCOM)-test.csv', index=False)
