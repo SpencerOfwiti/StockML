@@ -28,3 +28,4 @@ fi
 
 # install requirements
 pip install -r requirements.txt
+source .env

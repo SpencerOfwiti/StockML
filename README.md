@@ -108,9 +108,14 @@ To set up virtual environment and install dependencies:
 source setup.sh
 ```
 
+To set up project path:
+```
+source .env
+```
+
 To run python scripts:
 ```
-python3 src/data/make_dataset.py
+python src/data/make_dataset.py
 ```
 
 ## Tests

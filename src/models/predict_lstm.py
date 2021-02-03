@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 
 from src.scaling import scaler
-from src.rmse import rms
 from src.threshold import get_threshold
 
 # %% load dataset
@@ -21,28 +20,34 @@ test = data_list[threshold:, :]
 scaled_data = scaler.fit_transform(data_list)
 
 # %% create predictions for test data
-inputs = data[len(data) - len(test) - 60:].values
-inputs = inputs.reshape(-1, 1)
-inputs = scaler.transform(inputs)
+inputs = data[len(data) - 60:].values
 
-x_test = []
-for i in range(60, inputs.shape[0]):
-    x_test.append(inputs[i-60: i, 0])
-x_test = np.array(x_test)
 
-x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
-predicted_price = model.predict(x_test)
-predicted_price = scaler.inverse_transform(predicted_price)
+def make_prediction(test_data):
+    test_data = np.reshape(test_data, (test_data.shape[0], test_data.shape[1], 1))
+    predicted = model.predict(test_data)
+    predicted = scaler.inverse_transform(predicted)
+    return predicted
 
-# %% calculate RMSE
-rms = rms(test, predicted_price, 'LSTM')
-print('RMSE:', rms)
+
+days = 5
+predicted_price = []
+for _ in range(days):
+    loop_inputs = np.append(inputs, np.array(inputs), axis=0)
+    loop_inputs = loop_inputs.reshape(-1, 1)
+    loop_inputs = scaler.transform(loop_inputs)
+
+    x_test = []
+    for i in range(60, loop_inputs.shape[0]):
+        x_test.append(loop_inputs[i - 60: i, 0])
+    x_test = np.array(x_test)
+    predicted_price = make_prediction(x_test)
+    inputs = np.append(inputs, np.array([predicted_price[-1]]), axis=0)
 
 # %% create dataset with price and prediction
-pred = pd.DataFrame(index=range(0, len(test)), columns=['Price', 'Prediction'])
+pred = pd.DataFrame(index=range(0, len(predicted_price)), columns=['Prediction'])
 
-for i in range(0, len(test)):
-    pred['Price'][i] = test[i][0]
+for i in range(0, len(predicted_price)):
     pred['Prediction'][i] = predicted_price[i][0]
 
 # %% save predicted data

@@ -21,8 +21,8 @@ data.to_csv('data/processed/Safaricom-Ltd(SCOM)-lstm.csv', index=False)
 
 # %% split data into train data
 data_list = data.values
-threshold = get_threshold(data_list)
-train = data_list[:threshold, :]
+# threshold = get_threshold(data_list)
+train = data_list
 
 # %% scale the data
 scaled_data = scaler.fit_transform(data_list)
@@ -44,7 +44,7 @@ model.add(Dense(1))
 
 # %% compile and fit the model
 model.compile(loss='mean_squared_error', optimizer='adam')
-model.fit(x_train, y_train, epochs=10, batch_size=1, verbose=2)
+model.fit(x_train, y_train, epochs=30, batch_size=1, verbose=2)
 
 # %% save model for later use
 dump(model, 'models/lstm/Safaricom-Ltd(SCOM).pkl')

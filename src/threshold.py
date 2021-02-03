@@ -2,7 +2,7 @@ import math
 
 
 def get_threshold(data):
-    threshold = math.ceil(len(data)*0.8)
+    threshold = math.ceil(len(data)*0.9)
     return threshold
 
 
