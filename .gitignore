@@ -218,3 +218,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+data/raw/Safaricom-Ltd(SCOM) legacy.csv
+data/raw/Safaricom-Ltd(SCOM)January.csv
+test.py

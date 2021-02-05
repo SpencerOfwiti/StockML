@@ -1,16 +1,13 @@
-import sys
 import pandas as pd
 import matplotlib.pyplot as plt
+from src.threshold import get_threshold
 
 # %% load datasets
 test = pd.read_csv('data/predicted/lstm/Safaricom-Ltd(SCOM).csv')
 data = pd.read_csv('data/processed/Safaricom-Ltd(SCOM).csv')
 
-start_index = len(data) - 1
-last_price = data.iloc[start_index].Price
-top_row = pd.DataFrame({'Prediction': [last_price]})
-test = pd.concat([top_row, test]).reset_index(drop=True)
-test.index = [counter for counter in range(start_index, start_index + len(test))]
+threshold = get_threshold(data)
+test.index = data[threshold:].index
 
 # %% plot and save price prediction
 period = 60  # 2 months
